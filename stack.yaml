@@ -1,0 +1,16 @@
+resolver: lts-12.6
+packages:
+- .
+extra-deps:
+- http2-grpc-types-0.3.0.0
+- lens-labels-0.3.0.0
+- proto-lens-0.4.0.0
+- proto-lens-protoc-0.4.0.0
+- proto-lens-runtime-0.4.0.1
+- warp-3.2.24
+- warp-grpc-0.1.0.3
+- proto-lens-protobuf-types-0.4.0.0
+- proto-lens-setup-0.4.0.2
+- cql-io-1.1.0
+flags: {}
+extra-package-dbs: []

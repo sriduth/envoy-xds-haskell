@@ -1,0 +1,741 @@
+-- This file has been generated from package.yaml by hpack version 0.28.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: cef3f2377e2ff83a28054aa766a09219faa6c05232ff53752bc6681ef72bc011
+
+name:           envoy-xds-haskell
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/warp-grpc-example#readme>
+homepage:       https://github.com/githubuser/warp-grpc-example#readme
+bug-reports:    https://github.com/githubuser/warp-grpc-example/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2018 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/warp-grpc-example
+
+library
+  exposed-modules:
+      Common
+      GrpcServices.AccessLogStream
+      GrpcServices.ClusterDiscovery
+      GrpcServices.RouteDiscovery
+      Lib
+      Utils
+      Proto.Admin.V2alpha.Certs
+      Proto.Admin.V2alpha.Certs_Fields
+      Proto.Admin.V2alpha.Clusters
+      Proto.Admin.V2alpha.Clusters_Fields
+      Proto.Admin.V2alpha.ConfigDump
+      Proto.Admin.V2alpha.ConfigDump_Fields
+      Proto.Admin.V2alpha.Listeners
+      Proto.Admin.V2alpha.Listeners_Fields
+      Proto.Admin.V2alpha.Memory
+      Proto.Admin.V2alpha.Memory_Fields
+      Proto.Admin.V2alpha.Metrics
+      Proto.Admin.V2alpha.Metrics_Fields
+      Proto.Admin.V2alpha.MutexStats
+      Proto.Admin.V2alpha.MutexStats_Fields
+      Proto.Admin.V2alpha.ServerInfo
+      Proto.Admin.V2alpha.ServerInfo_Fields
+      Proto.Admin.V2alpha.Tap
+      Proto.Admin.V2alpha.Tap_Fields
+      Proto.Admin.V3alpha.Certs
+      Proto.Admin.V3alpha.Certs_Fields
+      Proto.Admin.V3alpha.Clusters
+      Proto.Admin.V3alpha.Clusters_Fields
+      Proto.Admin.V3alpha.ConfigDump
+      Proto.Admin.V3alpha.ConfigDump_Fields
+      Proto.Admin.V3alpha.Listeners
+      Proto.Admin.V3alpha.Listeners_Fields
+      Proto.Admin.V3alpha.Memory
+      Proto.Admin.V3alpha.Memory_Fields
+      Proto.Admin.V3alpha.Metrics
+      Proto.Admin.V3alpha.Metrics_Fields
+      Proto.Admin.V3alpha.MutexStats
+      Proto.Admin.V3alpha.MutexStats_Fields
+      Proto.Admin.V3alpha.ServerInfo
+      Proto.Admin.V3alpha.ServerInfo_Fields
+      Proto.Admin.V3alpha.Tap
+      Proto.Admin.V3alpha.Tap_Fields
+      Proto.Api.V2.Auth.Cert
+      Proto.Api.V2.Auth.Cert_Fields
+      Proto.Api.V2.Cds
+      Proto.Api.V2.Cds_Fields
+      Proto.Api.V2.Cluster.CircuitBreaker
+      Proto.Api.V2.Cluster.CircuitBreaker_Fields
+      Proto.Api.V2.Cluster.Filter
+      Proto.Api.V2.Cluster.Filter_Fields
+      Proto.Api.V2.Cluster.OutlierDetection
+      Proto.Api.V2.Cluster.OutlierDetection_Fields
+      Proto.Api.V2.Core.Address
+      Proto.Api.V2.Core.Address_Fields
+      Proto.Api.V2.Core.Base
+      Proto.Api.V2.Core.Base_Fields
+      Proto.Api.V2.Core.ConfigSource
+      Proto.Api.V2.Core.ConfigSource_Fields
+      Proto.Api.V2.Core.GrpcService
+      Proto.Api.V2.Core.GrpcService_Fields
+      Proto.Api.V2.Core.HealthCheck
+      Proto.Api.V2.Core.HealthCheck_Fields
+      Proto.Api.V2.Core.HttpUri
+      Proto.Api.V2.Core.HttpUri_Fields
+      Proto.Api.V2.Core.Protocol
+      Proto.Api.V2.Core.Protocol_Fields
+      Proto.Api.V2.Discovery
+      Proto.Api.V2.Discovery_Fields
+      Proto.Api.V2.Eds
+      Proto.Api.V2.Eds_Fields
+      Proto.Api.V2.Endpoint.Endpoint
+      Proto.Api.V2.Endpoint.Endpoint_Fields
+      Proto.Api.V2.Endpoint.LoadReport
+      Proto.Api.V2.Endpoint.LoadReport_Fields
+      Proto.Api.V2.Lds
+      Proto.Api.V2.Lds_Fields
+      Proto.Api.V2.Listener.Listener
+      Proto.Api.V2.Listener.Listener_Fields
+      Proto.Api.V2.Listener.QuicConfig
+      Proto.Api.V2.Listener.QuicConfig_Fields
+      Proto.Api.V2.Listener.UdpListenerConfig
+      Proto.Api.V2.Listener.UdpListenerConfig_Fields
+      Proto.Api.V2.Ratelimit.Ratelimit
+      Proto.Api.V2.Ratelimit.Ratelimit_Fields
+      Proto.Api.V2.Rds
+      Proto.Api.V2.Rds_Fields
+      Proto.Api.V2.Route.Route
+      Proto.Api.V2.Route.Route_Fields
+      Proto.Api.V2.Srds
+      Proto.Api.V2.Srds_Fields
+      Proto.Api.V3alpha.Auth.Cert
+      Proto.Api.V3alpha.Auth.Cert_Fields
+      Proto.Api.V3alpha.Cds
+      Proto.Api.V3alpha.Cds_Fields
+      Proto.Api.V3alpha.Cluster.CircuitBreaker
+      Proto.Api.V3alpha.Cluster.CircuitBreaker_Fields
+      Proto.Api.V3alpha.Cluster.Filter
+      Proto.Api.V3alpha.Cluster.Filter_Fields
+      Proto.Api.V3alpha.Cluster.OutlierDetection
+      Proto.Api.V3alpha.Cluster.OutlierDetection_Fields
+      Proto.Api.V3alpha.Core.Address
+      Proto.Api.V3alpha.Core.Address_Fields
+      Proto.Api.V3alpha.Core.Base
+      Proto.Api.V3alpha.Core.Base_Fields
+      Proto.Api.V3alpha.Core.ConfigSource
+      Proto.Api.V3alpha.Core.ConfigSource_Fields
+      Proto.Api.V3alpha.Core.GrpcService
+      Proto.Api.V3alpha.Core.GrpcService_Fields
+      Proto.Api.V3alpha.Core.HealthCheck
+      Proto.Api.V3alpha.Core.HealthCheck_Fields
+      Proto.Api.V3alpha.Core.HttpUri
+      Proto.Api.V3alpha.Core.HttpUri_Fields
+      Proto.Api.V3alpha.Core.Protocol
+      Proto.Api.V3alpha.Core.Protocol_Fields
+      Proto.Api.V3alpha.Discovery
+      Proto.Api.V3alpha.Discovery_Fields
+      Proto.Api.V3alpha.Eds
+      Proto.Api.V3alpha.Eds_Fields
+      Proto.Api.V3alpha.Endpoint.Endpoint
+      Proto.Api.V3alpha.Endpoint.Endpoint_Fields
+      Proto.Api.V3alpha.Endpoint.LoadReport
+      Proto.Api.V3alpha.Endpoint.LoadReport_Fields
+      Proto.Api.V3alpha.Lds
+      Proto.Api.V3alpha.Lds_Fields
+      Proto.Api.V3alpha.Listener.Listener
+      Proto.Api.V3alpha.Listener.Listener_Fields
+      Proto.Api.V3alpha.Listener.UdpListenerConfig
+      Proto.Api.V3alpha.Listener.UdpListenerConfig_Fields
+      Proto.Api.V3alpha.Ratelimit.Ratelimit
+      Proto.Api.V3alpha.Ratelimit.Ratelimit_Fields
+      Proto.Api.V3alpha.Rds
+      Proto.Api.V3alpha.Rds_Fields
+      Proto.Api.V3alpha.Route.Route
+      Proto.Api.V3alpha.Route.Route_Fields
+      Proto.Api.V3alpha.Srds
+      Proto.Api.V3alpha.Srds_Fields
+      Proto.Config.Accesslog.V2.Als
+      Proto.Config.Accesslog.V2.Als_Fields
+      Proto.Config.Accesslog.V2.File
+      Proto.Config.Accesslog.V2.File_Fields
+      Proto.Config.Accesslog.V3alpha.Als
+      Proto.Config.Accesslog.V3alpha.Als_Fields
+      Proto.Config.Accesslog.V3alpha.File
+      Proto.Config.Accesslog.V3alpha.File_Fields
+      Proto.Config.Bootstrap.V2.Bootstrap
+      Proto.Config.Bootstrap.V2.Bootstrap_Fields
+      Proto.Config.Bootstrap.V3alpha.Bootstrap
+      Proto.Config.Bootstrap.V3alpha.Bootstrap_Fields
+      Proto.Config.Cluster.DynamicForwardProxy.V2alpha.Cluster
+      Proto.Config.Cluster.DynamicForwardProxy.V2alpha.Cluster_Fields
+      Proto.Config.Cluster.DynamicForwardProxy.V3alpha.Cluster
+      Proto.Config.Cluster.DynamicForwardProxy.V3alpha.Cluster_Fields
+      Proto.Config.Cluster.Redis.RedisCluster
+      Proto.Config.Cluster.Redis.RedisCluster_Fields
+      Proto.Config.Common.DynamicForwardProxy.V2alpha.DnsCache
+      Proto.Config.Common.DynamicForwardProxy.V2alpha.DnsCache_Fields
+      Proto.Config.Common.DynamicForwardProxy.V3alpha.DnsCache
+      Proto.Config.Common.DynamicForwardProxy.V3alpha.DnsCache_Fields
+      Proto.Config.Common.Tap.V2alpha.Common
+      Proto.Config.Common.Tap.V2alpha.Common_Fields
+      Proto.Config.Common.Tap.V3alpha.Common
+      Proto.Config.Common.Tap.V3alpha.Common_Fields
+      Proto.Config.Filter.Accesslog.V2.Accesslog
+      Proto.Config.Filter.Accesslog.V2.Accesslog_Fields
+      Proto.Config.Filter.Accesslog.V3alpha.Accesslog
+      Proto.Config.Filter.Accesslog.V3alpha.Accesslog_Fields
+      Proto.Config.Filter.Dubbo.Router.V2alpha1.Router
+      Proto.Config.Filter.Dubbo.Router.V2alpha1.Router_Fields
+      Proto.Config.Filter.Dubbo.Router.V3alpha.Router
+      Proto.Config.Filter.Dubbo.Router.V3alpha.Router_Fields
+      Proto.Config.Filter.Fault.V2.Fault
+      Proto.Config.Filter.Fault.V2.Fault_Fields
+      Proto.Config.Filter.Fault.V3alpha.Fault
+      Proto.Config.Filter.Fault.V3alpha.Fault_Fields
+      Proto.Config.Filter.Http.AdaptiveConcurrency.V2alpha.AdaptiveConcurrency
+      Proto.Config.Filter.Http.AdaptiveConcurrency.V2alpha.AdaptiveConcurrency_Fields
+      Proto.Config.Filter.Http.Buffer.V2.Buffer
+      Proto.Config.Filter.Http.Buffer.V2.Buffer_Fields
+      Proto.Config.Filter.Http.Buffer.V3alpha.Buffer
+      Proto.Config.Filter.Http.Buffer.V3alpha.Buffer_Fields
+      Proto.Config.Filter.Http.Csrf.V2.Csrf
+      Proto.Config.Filter.Http.Csrf.V2.Csrf_Fields
+      Proto.Config.Filter.Http.Csrf.V3alpha.Csrf
+      Proto.Config.Filter.Http.Csrf.V3alpha.Csrf_Fields
+      Proto.Config.Filter.Http.DynamicForwardProxy.V2alpha.DynamicForwardProxy
+      Proto.Config.Filter.Http.DynamicForwardProxy.V2alpha.DynamicForwardProxy_Fields
+      Proto.Config.Filter.Http.DynamicForwardProxy.V3alpha.DynamicForwardProxy
+      Proto.Config.Filter.Http.DynamicForwardProxy.V3alpha.DynamicForwardProxy_Fields
+      Proto.Config.Filter.Http.ExtAuthz.V2.ExtAuthz
+      Proto.Config.Filter.Http.ExtAuthz.V2.ExtAuthz_Fields
+      Proto.Config.Filter.Http.ExtAuthz.V3alpha.ExtAuthz
+      Proto.Config.Filter.Http.ExtAuthz.V3alpha.ExtAuthz_Fields
+      Proto.Config.Filter.Http.Fault.V2.Fault
+      Proto.Config.Filter.Http.Fault.V2.Fault_Fields
+      Proto.Config.Filter.Http.Fault.V3alpha.Fault
+      Proto.Config.Filter.Http.Fault.V3alpha.Fault_Fields
+      Proto.Config.Filter.Http.GrpcHttp1ReverseBridge.V2alpha1.Config
+      Proto.Config.Filter.Http.GrpcHttp1ReverseBridge.V2alpha1.Config_Fields
+      Proto.Config.Filter.Http.GrpcHttp1ReverseBridge.V3alpha.Config
+      Proto.Config.Filter.Http.GrpcHttp1ReverseBridge.V3alpha.Config_Fields
+      Proto.Config.Filter.Http.Gzip.V2.Gzip
+      Proto.Config.Filter.Http.Gzip.V2.Gzip_Fields
+      Proto.Config.Filter.Http.Gzip.V3alpha.Gzip
+      Proto.Config.Filter.Http.Gzip.V3alpha.Gzip_Fields
+      Proto.Config.Filter.Http.HeaderToMetadata.V2.HeaderToMetadata
+      Proto.Config.Filter.Http.HeaderToMetadata.V2.HeaderToMetadata_Fields
+      Proto.Config.Filter.Http.HeaderToMetadata.V3alpha.HeaderToMetadata
+      Proto.Config.Filter.Http.HeaderToMetadata.V3alpha.HeaderToMetadata_Fields
+      Proto.Config.Filter.Http.HealthCheck.V2.HealthCheck
+      Proto.Config.Filter.Http.HealthCheck.V2.HealthCheck_Fields
+      Proto.Config.Filter.Http.HealthCheck.V3alpha.HealthCheck
+      Proto.Config.Filter.Http.HealthCheck.V3alpha.HealthCheck_Fields
+      Proto.Config.Filter.Http.IpTagging.V2.IpTagging
+      Proto.Config.Filter.Http.IpTagging.V2.IpTagging_Fields
+      Proto.Config.Filter.Http.IpTagging.V3alpha.IpTagging
+      Proto.Config.Filter.Http.IpTagging.V3alpha.IpTagging_Fields
+      Proto.Config.Filter.Http.JwtAuthn.V2alpha.Config
+      Proto.Config.Filter.Http.JwtAuthn.V2alpha.Config_Fields
+      Proto.Config.Filter.Http.JwtAuthn.V3alpha.Config
+      Proto.Config.Filter.Http.JwtAuthn.V3alpha.Config_Fields
+      Proto.Config.Filter.Http.Lua.V2.Lua
+      Proto.Config.Filter.Http.Lua.V2.Lua_Fields
+      Proto.Config.Filter.Http.Lua.V3alpha.Lua
+      Proto.Config.Filter.Http.Lua.V3alpha.Lua_Fields
+      Proto.Config.Filter.Http.OriginalSrc.V2alpha1.OriginalSrc
+      Proto.Config.Filter.Http.OriginalSrc.V2alpha1.OriginalSrc_Fields
+      Proto.Config.Filter.Http.OriginalSrc.V3alpha.OriginalSrc
+      Proto.Config.Filter.Http.OriginalSrc.V3alpha.OriginalSrc_Fields
+      Proto.Config.Filter.Http.RateLimit.V2.RateLimit
+      Proto.Config.Filter.Http.RateLimit.V2.RateLimit_Fields
+      Proto.Config.Filter.Http.RateLimit.V3alpha.RateLimit
+      Proto.Config.Filter.Http.RateLimit.V3alpha.RateLimit_Fields
+      Proto.Config.Filter.Http.Rbac.V2.Rbac
+      Proto.Config.Filter.Http.Rbac.V2.Rbac_Fields
+      Proto.Config.Filter.Http.Rbac.V3alpha.Rbac
+      Proto.Config.Filter.Http.Rbac.V3alpha.Rbac_Fields
+      Proto.Config.Filter.Http.Router.V2.Router
+      Proto.Config.Filter.Http.Router.V2.Router_Fields
+      Proto.Config.Filter.Http.Router.V3alpha.Router
+      Proto.Config.Filter.Http.Router.V3alpha.Router_Fields
+      Proto.Config.Filter.Http.Squash.V2.Squash
+      Proto.Config.Filter.Http.Squash.V2.Squash_Fields
+      Proto.Config.Filter.Http.Squash.V3alpha.Squash
+      Proto.Config.Filter.Http.Squash.V3alpha.Squash_Fields
+      Proto.Config.Filter.Http.Tap.V2alpha.Tap
+      Proto.Config.Filter.Http.Tap.V2alpha.Tap_Fields
+      Proto.Config.Filter.Http.Tap.V3alpha.Tap
+      Proto.Config.Filter.Http.Tap.V3alpha.Tap_Fields
+      Proto.Config.Filter.Http.Transcoder.V2.Transcoder
+      Proto.Config.Filter.Http.Transcoder.V2.Transcoder_Fields
+      Proto.Config.Filter.Http.Transcoder.V3alpha.Transcoder
+      Proto.Config.Filter.Http.Transcoder.V3alpha.Transcoder_Fields
+      Proto.Config.Filter.Listener.OriginalSrc.V2alpha1.OriginalSrc
+      Proto.Config.Filter.Listener.OriginalSrc.V2alpha1.OriginalSrc_Fields
+      Proto.Config.Filter.Listener.OriginalSrc.V3alpha.OriginalSrc
+      Proto.Config.Filter.Listener.OriginalSrc.V3alpha.OriginalSrc_Fields
+      Proto.Config.Filter.Network.ClientSslAuth.V2.ClientSslAuth
+      Proto.Config.Filter.Network.ClientSslAuth.V2.ClientSslAuth_Fields
+      Proto.Config.Filter.Network.ClientSslAuth.V3alpha.ClientSslAuth
+      Proto.Config.Filter.Network.ClientSslAuth.V3alpha.ClientSslAuth_Fields
+      Proto.Config.Filter.Network.DubboProxy.V2alpha1.DubboProxy
+      Proto.Config.Filter.Network.DubboProxy.V2alpha1.DubboProxy_Fields
+      Proto.Config.Filter.Network.DubboProxy.V2alpha1.Route
+      Proto.Config.Filter.Network.DubboProxy.V2alpha1.Route_Fields
+      Proto.Config.Filter.Network.DubboProxy.V3alpha.DubboProxy
+      Proto.Config.Filter.Network.DubboProxy.V3alpha.DubboProxy_Fields
+      Proto.Config.Filter.Network.DubboProxy.V3alpha.Route
+      Proto.Config.Filter.Network.DubboProxy.V3alpha.Route_Fields
+      Proto.Config.Filter.Network.ExtAuthz.V2.ExtAuthz
+      Proto.Config.Filter.Network.ExtAuthz.V2.ExtAuthz_Fields
+      Proto.Config.Filter.Network.ExtAuthz.V3alpha.ExtAuthz
+      Proto.Config.Filter.Network.ExtAuthz.V3alpha.ExtAuthz_Fields
+      Proto.Config.Filter.Network.HttpConnectionManager.V2.HttpConnectionManager
+      Proto.Config.Filter.Network.HttpConnectionManager.V2.HttpConnectionManager_Fields
+      Proto.Config.Filter.Network.HttpConnectionManager.V3alpha.HttpConnectionManager
+      Proto.Config.Filter.Network.HttpConnectionManager.V3alpha.HttpConnectionManager_Fields
+      Proto.Config.Filter.Network.MongoProxy.V2.MongoProxy
+      Proto.Config.Filter.Network.MongoProxy.V2.MongoProxy_Fields
+      Proto.Config.Filter.Network.MongoProxy.V3alpha.MongoProxy
+      Proto.Config.Filter.Network.MongoProxy.V3alpha.MongoProxy_Fields
+      Proto.Config.Filter.Network.MysqlProxy.V1alpha1.MysqlProxy
+      Proto.Config.Filter.Network.MysqlProxy.V1alpha1.MysqlProxy_Fields
+      Proto.Config.Filter.Network.RateLimit.V2.RateLimit
+      Proto.Config.Filter.Network.RateLimit.V2.RateLimit_Fields
+      Proto.Config.Filter.Network.RateLimit.V3alpha.RateLimit
+      Proto.Config.Filter.Network.RateLimit.V3alpha.RateLimit_Fields
+      Proto.Config.Filter.Network.Rbac.V2.Rbac
+      Proto.Config.Filter.Network.Rbac.V2.Rbac_Fields
+      Proto.Config.Filter.Network.Rbac.V3alpha.Rbac
+      Proto.Config.Filter.Network.Rbac.V3alpha.Rbac_Fields
+      Proto.Config.Filter.Network.RedisProxy.V2.RedisProxy
+      Proto.Config.Filter.Network.RedisProxy.V2.RedisProxy_Fields
+      Proto.Config.Filter.Network.RedisProxy.V3alpha.RedisProxy
+      Proto.Config.Filter.Network.RedisProxy.V3alpha.RedisProxy_Fields
+      Proto.Config.Filter.Network.TcpProxy.V2.TcpProxy
+      Proto.Config.Filter.Network.TcpProxy.V2.TcpProxy_Fields
+      Proto.Config.Filter.Network.TcpProxy.V3alpha.TcpProxy
+      Proto.Config.Filter.Network.TcpProxy.V3alpha.TcpProxy_Fields
+      Proto.Config.Filter.Network.ThriftProxy.V2alpha1.Route
+      Proto.Config.Filter.Network.ThriftProxy.V2alpha1.Route_Fields
+      Proto.Config.Filter.Network.ThriftProxy.V2alpha1.ThriftProxy
+      Proto.Config.Filter.Network.ThriftProxy.V2alpha1.ThriftProxy_Fields
+      Proto.Config.Filter.Network.ThriftProxy.V3alpha.Route
+      Proto.Config.Filter.Network.ThriftProxy.V3alpha.Route_Fields
+      Proto.Config.Filter.Network.ThriftProxy.V3alpha.ThriftProxy
+      Proto.Config.Filter.Network.ThriftProxy.V3alpha.ThriftProxy_Fields
+      Proto.Config.Filter.Network.ZookeeperProxy.V1alpha1.ZookeeperProxy
+      Proto.Config.Filter.Network.ZookeeperProxy.V1alpha1.ZookeeperProxy_Fields
+      Proto.Config.Filter.Thrift.RateLimit.V2alpha1.RateLimit
+      Proto.Config.Filter.Thrift.RateLimit.V2alpha1.RateLimit_Fields
+      Proto.Config.Filter.Thrift.RateLimit.V3alpha.RateLimit
+      Proto.Config.Filter.Thrift.RateLimit.V3alpha.RateLimit_Fields
+      Proto.Config.Filter.Thrift.Router.V2alpha1.Router
+      Proto.Config.Filter.Thrift.Router.V2alpha1.Router_Fields
+      Proto.Config.Filter.Thrift.Router.V3alpha.Router
+      Proto.Config.Filter.Thrift.Router.V3alpha.Router_Fields
+      Proto.Config.GrpcCredential.V2alpha.AwsIam
+      Proto.Config.GrpcCredential.V2alpha.AwsIam_Fields
+      Proto.Config.GrpcCredential.V2alpha.FileBasedMetadata
+      Proto.Config.GrpcCredential.V2alpha.FileBasedMetadata_Fields
+      Proto.Config.GrpcCredential.V3alpha.AwsIam
+      Proto.Config.GrpcCredential.V3alpha.AwsIam_Fields
+      Proto.Config.GrpcCredential.V3alpha.FileBasedMetadata
+      Proto.Config.GrpcCredential.V3alpha.FileBasedMetadata_Fields
+      Proto.Config.HealthChecker.Redis.V2.Redis
+      Proto.Config.HealthChecker.Redis.V2.Redis_Fields
+      Proto.Config.HealthChecker.Redis.V3alpha.Redis
+      Proto.Config.HealthChecker.Redis.V3alpha.Redis_Fields
+      Proto.Config.Metrics.V2.MetricsService
+      Proto.Config.Metrics.V2.MetricsService_Fields
+      Proto.Config.Metrics.V2.Stats
+      Proto.Config.Metrics.V2.Stats_Fields
+      Proto.Config.Metrics.V3alpha.MetricsService
+      Proto.Config.Metrics.V3alpha.MetricsService_Fields
+      Proto.Config.Metrics.V3alpha.Stats
+      Proto.Config.Metrics.V3alpha.Stats_Fields
+      Proto.Config.Overload.V2alpha.Overload
+      Proto.Config.Overload.V2alpha.Overload_Fields
+      Proto.Config.Overload.V3alpha.Overload
+      Proto.Config.Overload.V3alpha.Overload_Fields
+      Proto.Config.Ratelimit.V2.Rls
+      Proto.Config.Ratelimit.V2.Rls_Fields
+      Proto.Config.Ratelimit.V3alpha.Rls
+      Proto.Config.Ratelimit.V3alpha.Rls_Fields
+      Proto.Config.Rbac.V2.Rbac
+      Proto.Config.Rbac.V2.Rbac_Fields
+      Proto.Config.Rbac.V3alpha.Rbac
+      Proto.Config.Rbac.V3alpha.Rbac_Fields
+      Proto.Config.ResourceMonitor.FixedHeap.V2alpha.FixedHeap
+      Proto.Config.ResourceMonitor.FixedHeap.V2alpha.FixedHeap_Fields
+      Proto.Config.ResourceMonitor.FixedHeap.V3alpha.FixedHeap
+      Proto.Config.ResourceMonitor.FixedHeap.V3alpha.FixedHeap_Fields
+      Proto.Config.ResourceMonitor.InjectedResource.V2alpha.InjectedResource
+      Proto.Config.ResourceMonitor.InjectedResource.V2alpha.InjectedResource_Fields
+      Proto.Config.ResourceMonitor.InjectedResource.V3alpha.InjectedResource
+      Proto.Config.ResourceMonitor.InjectedResource.V3alpha.InjectedResource_Fields
+      Proto.Config.Retry.PreviousPriorities.PreviousPrioritiesConfig
+      Proto.Config.Retry.PreviousPriorities.PreviousPrioritiesConfig_Fields
+      Proto.Config.Trace.V2.Trace
+      Proto.Config.Trace.V2.Trace_Fields
+      Proto.Config.Trace.V3alpha.Trace
+      Proto.Config.Trace.V3alpha.Trace_Fields
+      Proto.Config.TransportSocket.Alts.V2alpha.Alts
+      Proto.Config.TransportSocket.Alts.V2alpha.Alts_Fields
+      Proto.Config.TransportSocket.Alts.V3alpha.Alts
+      Proto.Config.TransportSocket.Alts.V3alpha.Alts_Fields
+      Proto.Config.TransportSocket.Tap.V2alpha.Tap
+      Proto.Config.TransportSocket.Tap.V2alpha.Tap_Fields
+      Proto.Config.TransportSocket.Tap.V3alpha.Tap
+      Proto.Config.TransportSocket.Tap.V3alpha.Tap_Fields
+      Proto.Data.Accesslog.V2.Accesslog
+      Proto.Data.Accesslog.V2.Accesslog_Fields
+      Proto.Data.Accesslog.V3alpha.Accesslog
+      Proto.Data.Accesslog.V3alpha.Accesslog_Fields
+      Proto.Data.Cluster.V2alpha.OutlierDetectionEvent
+      Proto.Data.Cluster.V2alpha.OutlierDetectionEvent_Fields
+      Proto.Data.Cluster.V3alpha.OutlierDetectionEvent
+      Proto.Data.Cluster.V3alpha.OutlierDetectionEvent_Fields
+      Proto.Data.Core.V2alpha.HealthCheckEvent
+      Proto.Data.Core.V2alpha.HealthCheckEvent_Fields
+      Proto.Data.Core.V3alpha.HealthCheckEvent
+      Proto.Data.Core.V3alpha.HealthCheckEvent_Fields
+      Proto.Data.Tap.V2alpha.Common
+      Proto.Data.Tap.V2alpha.Common_Fields
+      Proto.Data.Tap.V2alpha.Http
+      Proto.Data.Tap.V2alpha.Http_Fields
+      Proto.Data.Tap.V2alpha.Transport
+      Proto.Data.Tap.V2alpha.Transport_Fields
+      Proto.Data.Tap.V2alpha.Wrapper
+      Proto.Data.Tap.V2alpha.Wrapper_Fields
+      Proto.Data.Tap.V3alpha.Common
+      Proto.Data.Tap.V3alpha.Common_Fields
+      Proto.Data.Tap.V3alpha.Http
+      Proto.Data.Tap.V3alpha.Http_Fields
+      Proto.Data.Tap.V3alpha.Transport
+      Proto.Data.Tap.V3alpha.Transport_Fields
+      Proto.Data.Tap.V3alpha.Wrapper
+      Proto.Data.Tap.V3alpha.Wrapper_Fields
+      Proto.Google.Api.Annotations
+      Proto.Google.Api.Annotations_Fields
+      Proto.Google.Api.Auth
+      Proto.Google.Api.Auth_Fields
+      Proto.Google.Api.Backend
+      Proto.Google.Api.Backend_Fields
+      Proto.Google.Api.Client
+      Proto.Google.Api.Client_Fields
+      Proto.Google.Api.ConfigChange
+      Proto.Google.Api.ConfigChange_Fields
+      Proto.Google.Api.Consumer
+      Proto.Google.Api.Consumer_Fields
+      Proto.Google.Api.Context
+      Proto.Google.Api.Context_Fields
+      Proto.Google.Api.Control
+      Proto.Google.Api.Control_Fields
+      Proto.Google.Api.Distribution
+      Proto.Google.Api.Distribution_Fields
+      Proto.Google.Api.Documentation
+      Proto.Google.Api.Documentation_Fields
+      Proto.Google.Api.Endpoint
+      Proto.Google.Api.Endpoint_Fields
+      Proto.Google.Api.Expr.V1alpha1.CelService
+      Proto.Google.Api.Expr.V1alpha1.CelService_Fields
+      Proto.Google.Api.Expr.V1alpha1.Checked
+      Proto.Google.Api.Expr.V1alpha1.Checked_Fields
+      Proto.Google.Api.Expr.V1alpha1.ConformanceService
+      Proto.Google.Api.Expr.V1alpha1.ConformanceService_Fields
+      Proto.Google.Api.Expr.V1alpha1.Eval
+      Proto.Google.Api.Expr.V1alpha1.Eval_Fields
+      Proto.Google.Api.Expr.V1alpha1.Explain
+      Proto.Google.Api.Expr.V1alpha1.Explain_Fields
+      Proto.Google.Api.Expr.V1alpha1.Syntax
+      Proto.Google.Api.Expr.V1alpha1.Syntax_Fields
+      Proto.Google.Api.Expr.V1alpha1.Value
+      Proto.Google.Api.Expr.V1alpha1.Value_Fields
+      Proto.Google.Api.Expr.V1beta1.Decl
+      Proto.Google.Api.Expr.V1beta1.Decl_Fields
+      Proto.Google.Api.Expr.V1beta1.Eval
+      Proto.Google.Api.Expr.V1beta1.Eval_Fields
+      Proto.Google.Api.Expr.V1beta1.Expr
+      Proto.Google.Api.Expr.V1beta1.Expr_Fields
+      Proto.Google.Api.Expr.V1beta1.Source
+      Proto.Google.Api.Expr.V1beta1.Source_Fields
+      Proto.Google.Api.Expr.V1beta1.Value
+      Proto.Google.Api.Expr.V1beta1.Value_Fields
+      Proto.Google.Api.FieldBehavior
+      Proto.Google.Api.FieldBehavior_Fields
+      Proto.Google.Api.Http
+      Proto.Google.Api.Http_Fields
+      Proto.Google.Api.Httpbody
+      Proto.Google.Api.Httpbody_Fields
+      Proto.Google.Api.Label
+      Proto.Google.Api.Label_Fields
+      Proto.Google.Api.LaunchStage
+      Proto.Google.Api.LaunchStage_Fields
+      Proto.Google.Api.Log
+      Proto.Google.Api.Log_Fields
+      Proto.Google.Api.Logging
+      Proto.Google.Api.Logging_Fields
+      Proto.Google.Api.Metric
+      Proto.Google.Api.Metric_Fields
+      Proto.Google.Api.MonitoredResource
+      Proto.Google.Api.MonitoredResource_Fields
+      Proto.Google.Api.Monitoring
+      Proto.Google.Api.Monitoring_Fields
+      Proto.Google.Api.Quota
+      Proto.Google.Api.Quota_Fields
+      Proto.Google.Api.Resource
+      Proto.Google.Api.Resource_Fields
+      Proto.Google.Api.SourceInfo
+      Proto.Google.Api.SourceInfo_Fields
+      Proto.Google.Api.SystemParameter
+      Proto.Google.Api.SystemParameter_Fields
+      Proto.Google.Api.Usage
+      Proto.Google.Api.Usage_Fields
+      Proto.Google.Protobuf.Any
+      Proto.Google.Protobuf.Any_Fields
+      Proto.Google.Protobuf.AnyTest
+      Proto.Google.Protobuf.AnyTest_Fields
+      Proto.Google.Protobuf.Api
+      Proto.Google.Protobuf.Api_Fields
+      Proto.Google.Protobuf.Descriptor
+      Proto.Google.Protobuf.Descriptor_Fields
+      Proto.Google.Protobuf.Duration
+      Proto.Google.Protobuf.Duration_Fields
+      Proto.Google.Protobuf.Empty
+      Proto.Google.Protobuf.Empty_Fields
+      Proto.Google.Protobuf.FieldMask
+      Proto.Google.Protobuf.FieldMask_Fields
+      Proto.Google.Protobuf.SourceContext
+      Proto.Google.Protobuf.SourceContext_Fields
+      Proto.Google.Protobuf.Struct
+      Proto.Google.Protobuf.Struct_Fields
+      Proto.Google.Protobuf.TestMessagesProto2
+      Proto.Google.Protobuf.TestMessagesProto2_Fields
+      Proto.Google.Protobuf.TestMessagesProto3
+      Proto.Google.Protobuf.TestMessagesProto3_Fields
+      Proto.Google.Protobuf.Timestamp
+      Proto.Google.Protobuf.Timestamp_Fields
+      Proto.Google.Protobuf.Type
+      Proto.Google.Protobuf.Type_Fields
+      Proto.Google.Protobuf.Wrappers
+      Proto.Google.Protobuf.Wrappers_Fields
+      Proto.Google.Rpc.Code
+      Proto.Google.Rpc.Code_Fields
+      Proto.Google.Rpc.ErrorDetails
+      Proto.Google.Rpc.ErrorDetails_Fields
+      Proto.Google.Rpc.Status
+      Proto.Google.Rpc.Status_Fields
+      Proto.Google.Type.CalendarPeriod
+      Proto.Google.Type.CalendarPeriod_Fields
+      Proto.Google.Type.Color
+      Proto.Google.Type.Color_Fields
+      Proto.Google.Type.Date
+      Proto.Google.Type.Date_Fields
+      Proto.Google.Type.Dayofweek
+      Proto.Google.Type.Dayofweek_Fields
+      Proto.Google.Type.Expr
+      Proto.Google.Type.Expr_Fields
+      Proto.Google.Type.Fraction
+      Proto.Google.Type.Fraction_Fields
+      Proto.Google.Type.Latlng
+      Proto.Google.Type.Latlng_Fields
+      Proto.Google.Type.Money
+      Proto.Google.Type.Money_Fields
+      Proto.Google.Type.PostalAddress
+      Proto.Google.Type.PostalAddress_Fields
+      Proto.Google.Type.Quaternion
+      Proto.Google.Type.Quaternion_Fields
+      Proto.Google.Type.Timeofday
+      Proto.Google.Type.Timeofday_Fields
+      Proto.Metrics
+      Proto.Metrics_Fields
+      Proto.Opencensus.Proto.Resource.V1.Resource
+      Proto.Opencensus.Proto.Resource.V1.Resource_Fields
+      Proto.Opencensus.Proto.Trace.V1.Trace
+      Proto.Opencensus.Proto.Trace.V1.Trace_Fields
+      Proto.Opencensus.Proto.Trace.V1.TraceConfig
+      Proto.Opencensus.Proto.Trace.V1.TraceConfig_Fields
+      Proto.Service.Accesslog.V2.Als
+      Proto.Service.Accesslog.V2.Als_Fields
+      Proto.Service.Accesslog.V3alpha.Als
+      Proto.Service.Accesslog.V3alpha.Als_Fields
+      Proto.Service.Auth.V2.AttributeContext
+      Proto.Service.Auth.V2.AttributeContext_Fields
+      Proto.Service.Auth.V2.ExternalAuth
+      Proto.Service.Auth.V2.ExternalAuth_Fields
+      Proto.Service.Auth.V2alpha.ExternalAuth
+      Proto.Service.Auth.V2alpha.ExternalAuth_Fields
+      Proto.Service.Auth.V3alpha.AttributeContext
+      Proto.Service.Auth.V3alpha.AttributeContext_Fields
+      Proto.Service.Auth.V3alpha.ExternalAuth
+      Proto.Service.Auth.V3alpha.ExternalAuth_Fields
+      Proto.Service.Discovery.V2.Ads
+      Proto.Service.Discovery.V2.Ads_Fields
+      Proto.Service.Discovery.V2.Hds
+      Proto.Service.Discovery.V2.Hds_Fields
+      Proto.Service.Discovery.V2.Rtds
+      Proto.Service.Discovery.V2.Rtds_Fields
+      Proto.Service.Discovery.V2.Sds
+      Proto.Service.Discovery.V2.Sds_Fields
+      Proto.Service.Discovery.V3alpha.Ads
+      Proto.Service.Discovery.V3alpha.Ads_Fields
+      Proto.Service.Discovery.V3alpha.Hds
+      Proto.Service.Discovery.V3alpha.Hds_Fields
+      Proto.Service.Discovery.V3alpha.Rtds
+      Proto.Service.Discovery.V3alpha.Rtds_Fields
+      Proto.Service.Discovery.V3alpha.Sds
+      Proto.Service.Discovery.V3alpha.Sds_Fields
+      Proto.Service.LoadStats.V2.Lrs
+      Proto.Service.LoadStats.V2.Lrs_Fields
+      Proto.Service.LoadStats.V3alpha.Lrs
+      Proto.Service.LoadStats.V3alpha.Lrs_Fields
+      Proto.Service.Metrics.V2.MetricsService
+      Proto.Service.Metrics.V2.MetricsService_Fields
+      Proto.Service.Metrics.V3alpha.MetricsService
+      Proto.Service.Metrics.V3alpha.MetricsService_Fields
+      Proto.Service.Ratelimit.V2.Rls
+      Proto.Service.Ratelimit.V2.Rls_Fields
+      Proto.Service.Ratelimit.V3alpha.Rls
+      Proto.Service.Ratelimit.V3alpha.Rls_Fields
+      Proto.Service.Tap.V2alpha.Common
+      Proto.Service.Tap.V2alpha.Common_Fields
+      Proto.Service.Tap.V2alpha.Tap
+      Proto.Service.Tap.V2alpha.Tap_Fields
+      Proto.Service.Tap.V2alpha.Tapds
+      Proto.Service.Tap.V2alpha.Tapds_Fields
+      Proto.Service.Tap.V3alpha.Common
+      Proto.Service.Tap.V3alpha.Common_Fields
+      Proto.Service.Tap.V3alpha.Tap
+      Proto.Service.Tap.V3alpha.Tap_Fields
+      Proto.Service.Tap.V3alpha.Tapds
+      Proto.Service.Tap.V3alpha.Tapds_Fields
+      Proto.Service.Trace.V2.TraceService
+      Proto.Service.Trace.V2.TraceService_Fields
+      Proto.Service.Trace.V3alpha.TraceService
+      Proto.Service.Trace.V3alpha.TraceService_Fields
+      Proto.Type.HttpStatus
+      Proto.Type.HttpStatus_Fields
+      Proto.Type.Matcher.Metadata
+      Proto.Type.Matcher.Metadata_Fields
+      Proto.Type.Matcher.Number
+      Proto.Type.Matcher.Number_Fields
+      Proto.Type.Matcher.Regex
+      Proto.Type.Matcher.Regex_Fields
+      Proto.Type.Matcher.String
+      Proto.Type.Matcher.String_Fields
+      Proto.Type.Matcher.Value
+      Proto.Type.Matcher.Value_Fields
+      Proto.Type.Percent
+      Proto.Type.Percent_Fields
+      Proto.Type.Range
+      Proto.Type.Range_Fields
+      Proto.Validate.Validate
+      Proto.Validate.Validate_Fields
+  other-modules:
+      Paths_envoy_xds_haskell
+  hs-source-dirs:
+      src
+      gen
+  build-depends:
+      base >=4.7 && <5
+    , binary
+    , bytestring
+    , containers
+    , data-default-class
+    , hslogger
+    , http-conduit
+    , http2-grpc-types >=0.3
+    , lens
+    , proto-lens >=0.4
+    , proto-lens-protobuf-types
+    , proto-lens-runtime >=0.4
+    , split
+    , text
+    , time
+    , transformers
+    , unordered-containers
+    , uuid
+    , wai
+    , warp
+    , warp-grpc >=0.1.0.3
+    , warp-tls
+    , yaml
+  default-language: Haskell2010
+
+executable envoy-xds
+  main-is: Main.hs
+  other-modules:
+      Paths_envoy_xds_haskell
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , binary
+    , bytestring
+    , containers
+    , data-default-class
+    , envoy-xds-haskell
+    , hslogger
+    , http-conduit
+    , http2-grpc-types >=0.3
+    , lens
+    , proto-lens >=0.4
+    , proto-lens-protobuf-types
+    , proto-lens-runtime >=0.4
+    , split
+    , text
+    , time
+    , transformers
+    , unordered-containers
+    , uuid
+    , wai
+    , warp
+    , warp-grpc >=0.1.0.3
+    , warp-tls
+    , yaml
+  default-language: Haskell2010
+
+test-suite warp-grpc-example-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_envoy_xds_haskell
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , binary
+    , bytestring
+    , containers
+    , data-default-class
+    , envoy-warp-grpc-xds
+    , hslogger
+    , http-conduit
+    , http2-grpc-types >=0.3
+    , lens
+    , proto-lens >=0.4
+    , proto-lens-protobuf-types
+    , proto-lens-runtime >=0.4
+    , split
+    , text
+    , time
+    , transformers
+    , unordered-containers
+    , uuid
+    , wai
+    , warp
+    , warp-grpc >=0.1.0.3
+    , warp-tls
+    , yaml
+  default-language: Haskell2010
